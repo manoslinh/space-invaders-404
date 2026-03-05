@@ -1,21 +1,96 @@
 # Space Invaders 404 🚀👾
 
-A playful Space Invaders arcade game for your 404 page. Drop-in React/Next.js component with mobile support, high scores, and emoji invaders.
+**A container-agnostic Space Invaders game component that can be embedded anywhere.**
+
+Perfect for:
+- **404 Pages** - Turn "page not found" into fun
+- **Landing Pages** - Interactive engagement
+- **Widgets** - Sidebar games or Easter eggs
+- **Documentation** - Playful examples
+- **Portfolios** - Showcase your skills
 
 ![Space Invaders 404 Game](https://github.com/manoslinh/space-invaders-404/raw/main/screenshot.png)
 
+## 🎯 What We're Building
+
+A **standalone, reusable game component** with:
+- **Zero dependencies** on page context (doesn't know about 404 pages)
+- **Mobile-first** design with touch controls
+- **Pure separation** of game logic, rendering, and UI
+- **Easy customization** - themes, difficulty, callbacks
+- **Multiple integration options** - React, vanilla JS, frameworks
+
+### Architecture Philosophy
+```
+404 Page Example (just one use case)
+         ↓
+   SpaceInvaders404 Component (container-agnostic)
+         ↓
+   ┌─────────────────────┐
+   │  Game Engine        │ ← Pure logic
+   │  Canvas Renderer    │ ← Pure drawing  
+   └─────────────────────┘
+```
+
+The game component doesn't care where it's used. A 404 page is just one example.
+
 ## ✨ Features
 
-- **🎮 Full Space Invaders Gameplay** - Shoot invaders, avoid bullets, survive waves
-- **📱 Mobile-First Design** - Touch controls, responsive canvas, optimized for all screens
-- **👾 Emoji Invaders** - Starts with classic 👾, transitions to random emojis as waves progress
-- **🏆 High Score Persistence** - LocalStorage keeps your best score
-- **🎯 Gentle Difficulty Curve** - Relaxed gameplay that gets slightly harder each wave
-- **🖱️ Dual Controls** - Drag or keyboard arrows (← →) for movement
-- **⚡ Zero Dependencies** - Pure React + Canvas, no external game engines
-- **🎨 Customizable** - Easy to theme, adjust difficulty, or replace emojis
+### 🎮 Core Gameplay
+- **Full Space Invaders Experience** - Shoot invaders, avoid bullets, survive waves
+- **Progressive Difficulty** - Gets slightly harder each wave (configurable)
+- **High Score Persistence** - LocalStorage keeps your best score
+- **Multiple Control Schemes** - Keyboard, mouse drag, touch controls
+
+### 📱 Mobile-First Design
+- **Touch-Optimized** - Drag controls work perfectly on mobile
+- **Responsive Canvas** - Adapts to container size
+- **Mobile-Specific UI** - Larger touch targets, simplified instructions
+- **Performance Optimized** - Smooth 60fps on mobile devices
+
+### 🎨 Visual & Customization
+- **Emoji Invaders** - Starts with classic 👾, transitions to random emojis
+- **Theme Support** - Dark/light modes with customizable colors
+- **Configurable Difficulty** - Presets from "relaxed" to "insane"
+- **Extensible Architecture** - Replace emojis, add power-ups, customize HUD
+
+### ⚡ Technical Excellence
+- **Zero Runtime Dependencies** - Pure React + Canvas
+- **TypeScript First** - Full type safety and IntelliSense
+- **Separation of Concerns** - Game logic ≠ Rendering ≠ Component
+- **Tree Shakable** - Only bundle what you use
+
+## 🚧 Development Status
+
+**Current Phase**: Core architecture complete, package setup in progress
+
+### ✅ Completed
+- Game engine (pure logic)
+- Canvas renderer (pure drawing)  
+- React component (container-agnostic)
+- TypeScript types and utilities
+- 404 page example
+- Comprehensive documentation
+
+### 🚧 In Progress
+- Package configuration (`package.json`, build setup)
+- Vanilla JS version
+- Testing suite
+- CI/CD pipeline
+
+### 📋 Coming Soon
+- npm package publication
+- More framework examples (Vue, Svelte)
+- Advanced customization options
+- Performance optimizations
+
+See [TODO.md](./TODO.md) for detailed progress tracking.
+
+---
 
 ## 🚀 Quick Start
+
+*Note: Package not yet published to npm. Currently in development.*
 
 ### Installation
 
@@ -354,6 +429,30 @@ npm run build        # Build for production
 npm run test         # Run tests
 npm run lint         # Lint code
 ```
+
+## 🏗️ Development
+
+### Current Branch: `develop`
+We follow Git Flow:
+- `main` - Production releases only
+- `develop` - Integration branch for features
+- Feature branches - `feature/*` for new work
+
+### Getting Started for Development
+```bash
+# Clone and checkout develop branch
+git clone https://github.com/manoslinh/space-invaders-404.git
+cd space-invaders-404
+git checkout develop
+
+# After package setup is complete:
+npm install
+npm run dev  # Start development server
+```
+
+See [TODO.md](./TODO.md) for detailed development roadmap.
+
+---
 
 ## 🤝 Contributing
 
